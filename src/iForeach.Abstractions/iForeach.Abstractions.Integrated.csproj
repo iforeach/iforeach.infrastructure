@@ -1,0 +1,142 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>org.iForeach</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="iForeach.Abstractions\**" />
+    <Compile Remove="obj\**" />
+    <EmbeddedResource Remove="iForeach.Abstractions\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="iForeach.Abstractions\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="iForeach.Abstractions\BackgroundTasks\BackgroundTaskAttribute.cs" />
+    <Compile Include="iForeach.Abstractions\BackgroundTasks\BackgroundTaskExtensions.cs" />
+    <Compile Include="iForeach.Abstractions\BackgroundTasks\BackgroundTaskSettings.cs" />
+    <Compile Include="iForeach.Abstractions\BackgroundTasks\BackgroundTaskState.cs" />
+    <Compile Include="iForeach.Abstractions\BackgroundTasks\IBackgroundTask.cs" />
+    <Compile Include="iForeach.Abstractions\BackgroundTasks\IBackgroundTaskSettingsProvider.cs" />
+    <Compile Include="iForeach.Abstractions\Builder\IforeachCoreBuilder.cs" />
+    <Compile Include="iForeach.Abstractions\Builder\StartupActions.cs" />
+    <Compile Include="iForeach.Abstractions\Builder\StartupActionsStartup.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Cache\ISignal.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\ExtensionsFileSystemExtensions.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Features\CompositeFeaturesProvider.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Features\FeatureEntry.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Features\IFeatureBuilderEvents.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Features\IFeatureHash.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Features\IFeatureInfo.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Features\IFeaturesProvider.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Features\InternalFeatureInfo.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Features\ITypeFeatureProvider.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Hosting\Application.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Hosting\IHostEnvironmentProxy.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\IExtensionDependencyStrategy.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\IExtensionInfo.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\IExtensionManager.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\IExtensionPriorityStrategy.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\IManifestInfo.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\InternalExtensionInfo.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Loaders\ExtensionEntry.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Manifests\NotFoundManifestInfo.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\NotFoundExtensionInfo.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Extensions\Utility\DependencyOrderingUtility.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Builders\ICompositionStrategy.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Builders\IShellContainerFactory.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Builders\IShellContextFactory.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Builders\Models\ShellBlueprint.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Builders\ShellContext.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Configuration\Internal\UpdatableDataProvider.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Configuration\IShellConfiguration.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Configuration\IShellConfigurationSources.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Configuration\IShellsConfigurationSources.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Configuration\IShellsSettingsSources.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Configuration\ShellConfiguration.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Descriptor\IShellDescriptorManager.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Descriptor\Models\ShellDescriptor.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Descriptor\Models\ShellFeature.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Descriptor\Models\ShellParameter.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\IFeatureEventHandler.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\IRunningShellTable.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\IShellDescriptorFeaturesManager.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\IShellDescriptorManagerEventHandler.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\IShellFeaturesManager.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\IShellHost.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\IShellSettingsManager.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\IShellStateManager.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\Models\TenantState.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\ShellFeaturesManagerExtensions.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\ShellHelper.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\ShellHostExtensions.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\ShellOptions.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\ShellSettings.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\State\ShellFeatureState.cs" />
+    <Compile Include="iForeach.Abstractions\Environment.Shell\State\ShellState.cs" />
+    <Compile Include="iForeach.Abstractions\GlobalStaticInstances.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\ClockExtension.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\IClock.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\ILocalClock.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\ITimeZone.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\ITimeZoneSelector.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\TimeZoneSelectorResult.cs" />
+    <None Include="iForeach.Abstractions\README.md" />
+    <Compile Include="iForeach.Abstractions\Coincidents\IDatetimeCoincident.cs" />
+    <Compile Include="iForeach.Abstractions\Coincidents\IGuidCoincident.cs" />
+    <Compile Include="iForeach.Abstractions\Coincidents\ICoincidentsFactory.cs" />
+    <Compile Include="iForeach.Abstractions\Coincidents\CoincidentsHelper.cs" />
+    <Compile Include="iForeach.Abstractions\DeferredTasks\DeferredTaskContext.cs" />
+    <Compile Include="iForeach.Abstractions\DeferredTasks\IDeferredTaskEngine.cs" />
+    <Compile Include="iForeach.Abstractions\DeferredTasks\IDeferredTaskState.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\IModularTenantRouteBuilder.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\AssemblyAttributeModuleNamesProvider.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\Asset.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\FeatureAttribute.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\FileProviders\EmbeddedDirectoryContents.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\FileProviders\EmbeddedDirectoryInfo.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\IModularTenantEvents.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\IModuleNamesProvider.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\IStartup.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\Manifest\ModuleMarkerAttribute.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\Manifest\ModuleNameAttribute.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\Manifest\ModuleAssetAttribute.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\Manifest\FeatureAttribute.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\Manifest\ModuleAttribute.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\ModularApplicationContext.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\Module.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\ModuleEmbeddedFileProvider.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\ModuleEmbeddedStaticFileProvider.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\ModuleProjectStaticFileProvider.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\RequireFeaturesAttribute.cs" />
+    <Compile Include="iForeach.Abstractions\Modules\StartupBase.cs" />
+    <Compile Include="iForeach.Abstractions\Runtime\IRuntimeHelper.cs" />
+    <Compile Include="iForeach.Abstractions\Runtime\IServiceContext.cs" />
+    <Compile Include="iForeach.Abstractions\Runtime\IServiceRouteBuilder.cs" />
+    <Compile Include="iForeach.Abstractions\Utilities.Extensions\DictionaryExtensions.cs" />
+    <Compile Include="iForeach.Abstractions\Utilities.Extensions\EnumerableExtensions.cs" />
+    <Compile Include="iForeach.Abstractions\Utilities.Extensions\ExceptionExtensions.cs" />
+    <Compile Include="iForeach.Abstractions\Utilities.Extensions\FileProviderExtensions.cs" />
+    <Compile Include="iForeach.Abstractions\Utilities.Extensions\InvokeExtensions.cs" />
+    <Compile Include="iForeach.Abstractions\Utilities.Extensions\LockExtensions.cs" />
+    <Compile Include="iForeach.Abstractions\Utilities.Extensions\StringExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="iForeach.Extensions.DependencyInjection.Abstractions" Version="1.0.0-prelease-201902.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0-preview5.19227.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.0-preview5.19227.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.0.0-preview5.19227.9" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0-preview5.19227.9" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Composite" Version="3.0.0-preview5.19227.9" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="3.0.0-preview5.19227.9" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical" Version="3.0.0-preview5.19227.9" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.0.0-preview5.19227.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+</Project>

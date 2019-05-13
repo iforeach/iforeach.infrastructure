@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{E0C57CF9-6BFA-4D60-A3A3-EA92F3D0637C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3FFB5739-AAE7-4BBE-9A7D-D1AE42AC5F7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-integrated", "02-integrated", "{60CE8CB5-78A4-4B6D-B681-32BC1828CB2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-distributed", "02-distributed", "{48343601-2A7B-4797-AA38-B38182FCDAFB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iForeach.Abstractions.Integrated", "src\iForeach.Abstractions\iForeach.Abstractions.Integrated.csproj", "{1DA1D44A-40E7-4138-97A3-ED16017A3EE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iForeach.Abstractions", "src\iForeach.Abstractions\iForeach.Abstractions\iForeach.Abstractions.csproj", "{6CFE9E12-FA44-4C37-B84A-25CB31412EA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-extensions", "01-extensions", "{D8240F14-6168-4BE6-ACBE-A67045F09830}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DA1D44A-40E7-4138-97A3-ED16017A3EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA1D44A-40E7-4138-97A3-ED16017A3EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA1D44A-40E7-4138-97A3-ED16017A3EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA1D44A-40E7-4138-97A3-ED16017A3EE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CFE9E12-FA44-4C37-B84A-25CB31412EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CFE9E12-FA44-4C37-B84A-25CB31412EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CFE9E12-FA44-4C37-B84A-25CB31412EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CFE9E12-FA44-4C37-B84A-25CB31412EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{60CE8CB5-78A4-4B6D-B681-32BC1828CB2E} = {3FFB5739-AAE7-4BBE-9A7D-D1AE42AC5F7B}
+		{48343601-2A7B-4797-AA38-B38182FCDAFB} = {3FFB5739-AAE7-4BBE-9A7D-D1AE42AC5F7B}
+		{1DA1D44A-40E7-4138-97A3-ED16017A3EE2} = {60CE8CB5-78A4-4B6D-B681-32BC1828CB2E}
+		{6CFE9E12-FA44-4C37-B84A-25CB31412EA5} = {48343601-2A7B-4797-AA38-B38182FCDAFB}
+		{D8240F14-6168-4BE6-ACBE-A67045F09830} = {3FFB5739-AAE7-4BBE-9A7D-D1AE42AC5F7B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E24C3D39-FF1C-4E27-A9EE-454B44300A72}
+	EndGlobalSection
+EndGlobal
