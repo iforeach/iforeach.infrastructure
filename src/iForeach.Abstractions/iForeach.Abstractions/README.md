@@ -13,5 +13,4 @@
    1. 首选：Microsoft.Extensions.**，version：3.0 +
    2. 次选：Microsoft.AspNetCore.**，version：2.2 +
    3. 必要：Newtonsoft.Json，version：12.02 +
-3. 增加命名服务 / 键化服务的支持：
-   1. 命名服务： 
+ 
